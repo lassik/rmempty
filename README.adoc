@@ -1,0 +1,18 @@
+# rmempty -- remove empty files and directories
+
+`rmempty` is like Unix `rm` but refuses to delete files or directories
+that are not empty.
+
+A regular file is considered empty if:
+
+* Its size is zero bytes.
+* It contains only a newline ('\n' or '\r\n').
+
+A directory is considered empty if it has no files in it, except
+possibly directory metadata files (`Thumbs.db`, `.DS_Store`) and other
+empty directories (up to any nesting depth). The contents of directory
+metadata files are checked for magic numbers to verify that they are
+not in fact some other kind of file.
+
+Other kinds of things (symbolic links, named pipes, sockets, devices)
+are never considered empty.

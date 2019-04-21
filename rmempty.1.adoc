@@ -1,0 +1,41 @@
+RMEMPTY(1)
+==========
+:doctype: manpage
+
+NAME
+----
+
+rmempty - remove only empty files and directories
+
+SYNOPSIS
+--------
+
+*rmempty* [-fv] [_path_ ...]
+
+DESCRIPTION
+-----------
+
+The *rmempty* utility is like the classic *rm* utility, but refuses to
+delete things that are not empty so you don't accidentally delete
+anything valuable.
+
+rmempty deletes:
+
+* zero-byte files
+* files containing only a newline character
+* empty directories
+* stacks of nested empty directories
+
+SCRIPTING
+---------
+
+The *rmempty* utility exits:
+
+0 -- all requested paths were deleted
+1 -- one or more requested paths were not deleted
+bigger number -- other error
+
+SEE ALSO
+--------
+
+rm(1), rmdir(1), find(1)

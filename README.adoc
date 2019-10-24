@@ -1,5 +1,7 @@
 # rmempty -- remove empty files and directories
 
+image::https://api.cirrus-ci.com/github/lassik/rmempty.svg[Build Status, link=https://cirrus-ci.com/github/lassik/rmempty]
+
 `rmempty` is like Unix `rm` but refuses to delete files or directories
 that are not empty.
 

@@ -7,5 +7,6 @@ cd "$(dirname "$0")"
 mkdir -p -- "$b"
 cd "$b"
 echo "Entering directory '$PWD'"
+set -x
 $CC $CFLAGS -o rmempty ../rmempty.c \
     -D "PROGVERSION=\"$(git describe --always --dirty)\""

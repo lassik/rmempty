@@ -1,0 +1,14 @@
+BasedOnStyle: LLVM
+AlignAfterOpenBracket: DontAlign
+AllowShortBlocksOnASingleLine: false
+AllowShortFunctionsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakAfterReturnType: TopLevel
+BreakBeforeBraces: Linux
+ColumnLimit: 80
+ContinuationIndentWidth: 8
+IndentCaseLabels: false
+IndentWidth: 8
+TabWidth: 8
+UseTab: ForIndentation

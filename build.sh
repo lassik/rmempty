@@ -1,6 +1,6 @@
 #!/bin/sh
 set -eu
-export CC=${CC:-clang}
+export CC=${CC:-gcc}
 export CFLAGS=${CFLAGS:--Wall -Wextra -Werror -std=c99 -Og -g}
 b="build-$(uname | tr A-Z- a-z_)-$(uname -m | tr A-Z- a-z_)-$CC"
 mkdir -p -- "$b"

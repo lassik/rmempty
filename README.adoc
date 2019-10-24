@@ -6,13 +6,11 @@ that are not empty.
 A regular file is considered empty if:
 
 * Its size is zero bytes.
-* It contains only a newline ('\n' or '\r\n').
+* It contains only a newline (`\r` or `\n` or `\r\n`).
+* It is a Mac OS Finder or Windows Explorer cache file.
 
-A directory is considered empty if it has no files in it, except
-possibly directory metadata files (`Thumbs.db`, `.DS_Store`) and other
-empty directories (up to any nesting depth). The contents of directory
-metadata files are checked for magic numbers to verify that they are
-not in fact some other kind of file.
+A directory is considered empty if it has nothing in it, except maybe
+other empty files and directories (up to any nesting depth).
 
 Other kinds of things (symbolic links, named pipes, sockets, devices)
 are never considered empty.

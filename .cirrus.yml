@@ -36,7 +36,10 @@ ubuntu_task:
 freebsd_task:
   freebsd_instance:
     image: freebsd-12-0-release-amd64
-  compile_script: ./build.sh
+  setup_script:
+    - pkg update -y
+    - pkg install -y git
+  compile_script: CC=clang ./build.sh
 macos_task:
   osx_instance:
     image: mojave-base

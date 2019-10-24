@@ -50,7 +50,7 @@ cygwin_task:
     os_version: 2019
   setup_script:
     - choco install -y --no-progress cygwin
-    - c:\tools\cygwin\cygwinsetup -q -P binutils,gcc-core
+    - c:\tools\cygwin\cygwinsetup -q -P binutils,gcc-core,git
   compile_script:
     - c:\tools\cygwin\bin\bash --login "%CD%\build.sh"
 msys_task:
@@ -59,6 +59,6 @@ msys_task:
     os_version: 2019
   setup_script:
     - set PATH=c:\tools\msys64\bin;c:\tools\msys64\usr\bin;%PATH%
-    - pacman --noconfirm -S gcc
+    - pacman --noconfirm -S gcc git
   compile_script:
     - c:\tools\msys64\usr\bin\bash --login "%CD%\build.sh"

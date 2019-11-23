@@ -72,8 +72,7 @@ path_basename(void)
 {
 	char *pos;
 
-	pos = strchr(path, 0);
-	while (pos > path) {
+	for (pos = strchr(path, 0); pos > path; pos--) {
 		if (pos[-1] == '/')
 			break;
 	}
